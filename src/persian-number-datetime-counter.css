@@ -1,0 +1,62 @@
+
+.fa-dt-counter,
+.fa-dt-counter-up {
+    direction: ltr !important;
+    display: inline-block;
+    visibility: hidden;
+    user-select: none;
+}
+
+.fa-dt-counter .fa-dt-counter-days,
+.fa-dt-counter .fa-dt-counter-hours,
+.fa-dt-counter .fa-dt-counter-minutes,
+.fa-dt-counter .fa-dt-counter-seconds,
+.fa-dt-counter-up .fa-dt-counter-days,
+.fa-dt-counter-up .fa-dt-counter-hours,
+.fa-dt-counter-up .fa-dt-counter-minutes,
+.fa-dt-counter-up .fa-dt-counter-seconds {
+    display: inline-block !important;
+    margin-left: .5em;
+    text-align: center;
+    position: relative;
+}
+
+.fa-dt-counter .fa-dt-counter-hours,
+.fa-dt-counter .fa-dt-counter-minutes,
+.fa-dt-counter .fa-dt-counter-seconds,
+.fa-dt-counter-up .fa-dt-counter-hours,
+.fa-dt-counter-up .fa-dt-counter-minutes,
+.fa-dt-counter-up .fa-dt-counter-seconds {
+    min-width: 2.5ch !important;
+}
+
+
+.fa-dt-counter .fa-dt-counter-days[data-content]::after,
+.fa-dt-counter .fa-dt-counter-hours[data-content]::after,
+.fa-dt-counter .fa-dt-counter-minutes[data-content]::after,
+.fa-dt-counter .fa-dt-counter-seconds[data-content]::after,
+.fa-dt-counter-up .fa-dt-counter-days[data-content]::after,
+.fa-dt-counter-up .fa-dt-counter-hours[data-content]::after,
+.fa-dt-counter-up .fa-dt-counter-minutes[data-content]::after,
+.fa-dt-counter-up .fa-dt-counter-seconds[data-content]::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    content: attr(data-content);
+    font-size: .5em;
+    text-align: center;
+    margin-top: 4ex;
+}
+
+.fa-dt-counter .fa-dt-counter-hours::before,
+.fa-dt-counter .fa-dt-counter-minutes::before,
+.fa-dt-counter .fa-dt-counter-seconds::before,
+.fa-dt-counter-up .fa-dt-counter-hours::before,
+.fa-dt-counter-up .fa-dt-counter-minutes::before,
+.fa-dt-counter-up .fa-dt-counter-seconds::before {
+    content: ':';
+    position: absolute;
+    left: 0;
+    margin-left: -.5em;
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="src/persian-number-datetime-counter.css">
+    <link href="https://v1.fontapi.ir/css/Vazir:500" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Vazir', sans-serif;
+        }
+        h1{
+            font-size: 2rem;
+        }
+        h2{
+            font-size: 1.25rem;
+        }
+        ul{
+            font-size: .75em;
+        }
+        small{
+            font-size: .5em;
+            margin-right: 2rem;
+        }
+        .fa-num-counter-item{
+            margin: 0 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Numbres & DateTime Counter</h1>
+        <h2>Number Counter:</h2><small></small>
+        <div style="text-align: center; font-size: 2rem;">
+            <span class="fa-num-counter" data-intravel="3.5" data-counter-to="2150"></span>&nbsp;<small>(3.5s)</small>
+            <span class="fa-num-counter" data-intravel="3" data-counter-to="15616"></span>&nbsp;<small>(3s)</small>
+            <span class="fa-num-counter" data-intravel="5" data-counter-to="94549846513"></span>&nbsp;<small>(5s)</small>
+            <span class="fa-num-counter en-digit-counter" data-intravel="2.55" data-counter-to="9500"></span>&nbsp;<small>(2.55s)</small>
+            <span class="fa-num-counter en-digit-counter" data-intravel="2" data-counter-to="205"></span>&nbsp;<small>(2s)</small>
+        </div>
+        <ul>
+            <li>jQuery is Required!</li>
+            <li>css file not used in section</li>
+            <li>add .fa-num-counter to your element (the name of this class is suggested)</li>
+            <li>add data-intravel="" on .fa-num-counter to set intravel time (second)</li>
+            <li>add data-counter-to="" on .fa-num-counter to set number of target</li>
+            <li>add .en-digit-counter on .fa-num-counter to En Digits</li>
+            <li>use $('.fa-num-counter').initNumberCounter(callback) to init this section, or $('.fa-num-counter').each((i. item)=> {$(item).initNumberCounter(callback)}) to init all sections</li>
+            <li>add callback function to execute when end counter</li>
+            <li>callback function have one argument which refers to .fa-num-counter</li>
+        </ul>
+
+        <hr>
+        <h2>Group Number Counter:</h2>
+        <div class="fa-group-num-counter" data-intravel="5" style="text-align: center; font-size: 2rem;">
+            <small>(5s) =></small> 
+            <span class="fa-num-counter-item" data-counter-to="215"></span> 
+            <span class="fa-num-counter-item" data-counter-to="894498"></span> 
+            <span class="fa-num-counter-item" data-counter-to="1561324"></span> 
+            <span class="fa-num-counter-item en-digit-counter" data-counter-to="265432"></span>
+        </div>
+        <div class="fa-group-num-counter" data-intravel="3" style="text-align: center; font-size: 2rem;">            
+            <small>(3s) =></small> 
+            <span class="fa-num-counter-item" data-counter-to="215"></span> 
+            <span class="fa-num-counter-item" data-counter-to="894498"></span> 
+            <span class="fa-num-counter-item" data-counter-to="1561324"></span> 
+            <span class="fa-num-counter-item en-digit-counter" data-counter-to="265432"></span>
+        </div>
+        <ul>
+            <li>jQuery is Required!</li>
+            <li>css file not used in section</li>
+            <li>add .fa-group-num-counter to your element (the name of this class is suggested)</li>
+            <li>add data-intravel="" on .fa-group-num-counter to set intravel time (second)</li>
+            <li>add child elements with .fa-num-counter-item into .fa-group-num-counter</li>
+            <li>add data-counter-to="" on .fa-num-counter-item to set number of target</li>
+            <li>add .en-digit-counter on .fa-num-counter-item to En Digits</li>
+            <li>use $('.fa-group-num-counter').initGroupNumberCounter(callback) to init this section, or $('.fa-group-num-counter').each((i. item)=> {$(item).initGroupNumberCounter(callback)}) to init all sections</li>
+            <li>add callback function to execute when end counter</li>
+            <li>callback function have one argument which refers to .fa-group-num-counter</li>
+        </ul>
+
+        <hr>
+        <h2>DateTime Counter Down To x:</h2>
+        <div style="text-align: center; font-size: 2rem;">
+            <div class="fa-dt-counter" data-dateTime="2021-02-13">
+                <span class="fa-dt-counter-days" data-content="روز"></span>
+                <span class="fa-dt-counter-hours" data-content="ساعت"></span>
+                <span class="fa-dt-counter-minutes" data-content="دقیقه"></span>
+                <span class="fa-dt-counter-seconds" data-content="ثانیه"></span>
+            </div>
+            <div class="fa-dt-counter" data-dateTime="2021-03-13 13:13:13">
+                <span class="fa-dt-counter-days" data-content="روز"></span>
+                <span class="fa-dt-counter-hours" data-content="ساعت"></span>
+                <span class="fa-dt-counter-minutes" data-content="دقیقه"></span>
+                <span class="fa-dt-counter-seconds" data-content="ثانیه"></span>
+            </div>
+            <div class="fa-dt-counter" data-dateTime="2021-04-21">
+                <span class="fa-dt-counter-days" data-content="روز"></span>
+                <span class="fa-dt-counter-hours" data-content="ساعت"></span>
+                <span class="fa-dt-counter-minutes" data-content="دقیقه"></span>
+                <span class="fa-dt-counter-seconds" data-content="ثانیه"></span>
+            </div>
+            <div class="fa-dt-counter" data-dateTime="2021-04-21">
+                <span class="fa-dt-counter-days" data-content="روز"></span>
+                <span class="fa-dt-counter-hours" data-content="ساعت"></span>
+                <span class="fa-dt-counter-minutes" data-content="دقیقه"></span>
+            </div>
+            <div class="fa-dt-counter en-digit-counter" data-dateTime="2021-5-1 13:13">
+                <span class="fa-dt-counter-days" data-content="days"></span>
+                <span class="fa-dt-counter-hours" data-content="hours"></span>
+                <span class="fa-dt-counter-minutes" data-content="min"></span>
+                <span class="fa-dt-counter-seconds" data-content="sec"></span>
+            </div>
+        </div>
+        <ul>
+            <li>jQuery is Required!</li>
+            <li>add .fa-dt-counter to your element and define 4 child elements for days, hours, minutes, seconds on .fa-dt-counter</li>
+            <li>add .fa-dt-counter-days on days, .fa-dt-counter-hours on hours, .fa-dt-counter-minutes on minutes, .fa-dt-counter-seconds on seconds</li>
+            <li>use data-dateTime="" on .fa-dt-counter to set Date or DateTime</li>
+            <li>use .en-digit-counter on .fa-dt-counter to En Digits</li>
+            <li>css file optional!</li>
+            <li>use data-content="" on .fa-dt-counter-days, .fa-dt-counter-hours, .fa-dt-counter-minutes,
+                .fa-dt-counter-seconds to set name of section (css file Required)</li>
+            <li>css file, add ':', name of sections and don't allow moved section when counter (fix width)</li>
+            <li>use $('.fa-dt-counter').initDateCounters(callback) to init this sections</li>
+            <li>add callback function to execute when end counter</li>
+            <li>callback function have one argument which refers to .fa-dt-counter</li>
+        </ul>
+
+        <hr>
+        <h2>DateTime Counter Up from x:</h2>
+        <div style="text-align: center; font-size: 2rem;">
+            <div class="fa-dt-counter-up" data-dateTime="2021-3-9 10:00">
+                <span class="fa-dt-counter-days" data-content="روز"></span>
+                <span class="fa-dt-counter-hours" data-content="ساعت"></span>
+                <span class="fa-dt-counter-minutes" data-content="دقیقه"></span>
+                <span class="fa-dt-counter-seconds" data-content="ثانیه"></span>
+            </div>
+            <div class="fa-dt-counter-up en-digit-counter" data-dateTime="1987-06-18">
+                <span class="fa-dt-counter-days" data-content="days"></span>
+                <span class="fa-dt-counter-hours" data-content="hours"></span>
+                <span class="fa-dt-counter-minutes" data-content="min"></span>
+                <span class="fa-dt-counter-seconds" data-content="sec"></span>
+            </div>
+            <div class="fa-dt-counter-up en-digit-counter" data-dateTime="1996-12-25">
+                <span class="fa-dt-counter-days" data-content="days"></span>
+                <span class="fa-dt-counter-hours" data-content="hours"></span>
+                <span class="fa-dt-counter-minutes" data-content="min"></span>
+                <span class="fa-dt-counter-seconds" data-content="sec"></span>
+            </div>
+            <div class="fa-dt-counter-up en-digit-counter" data-dateTime="2016-06-30 15:00">
+                <span class="fa-dt-counter-days" data-content="days"></span>
+                <span class="fa-dt-counter-hours" data-content="hours"></span>
+                <span class="fa-dt-counter-minutes" data-content="min"></span>
+                <span class="fa-dt-counter-seconds" data-content="sec"></span>
+            </div>
+        </div>
+        <ul>
+            <li>jQuery is Required!</li>
+            <li>add .fa-dt-counter-up to your element and define 4 child elements for days, hours, minutes, seconds on .fa-dt-counter-up</li>
+            <li>add .fa-dt-counter-days on days, .fa-dt-counter-hours on hours, .fa-dt-counter-minutes on minutes, .fa-dt-counter-seconds on seconds</li>
+            <li>use data-dateTime="" on .fa-dt-counter-up to set Date or DateTime</li>
+            <li>use .en-digit-counter on .fa-dt-counter-up to En Digits</li>
+            <li>css file optional!</li>
+            <li>use data-content="" on .fa-dt-counter-days, .fa-dt-counter-hours, .fa-dt-counter-minutes,
+                .fa-dt-counter-seconds to set name of section (css file Required)</li>
+            <li>css file, add ':', name of sections and don't allow moved section when counter (fix width)</li>
+            <li>use $('.fa-dt-counter-up').initUpDateCounters() to init this sections</li>
+        </ul>
+
+        <hr>
+        <h2>DateTime Counter Up After End Counter Down:</h2>
+        <div style="text-align: center; font-size: 2rem;">
+            <div class="fa-dt-counter after-end-counter-up" data-dateTime="2021-02-13">
+                <span class="fa-dt-counter-days" data-content="روز"></span>
+                <span class="fa-dt-counter-hours" data-content="ساعت"></span>
+                <span class="fa-dt-counter-minutes" data-content="دقیقه"></span>
+                <span class="fa-dt-counter-seconds" data-content="ثانیه"></span>
+            </div>
+        </div>
+        <ul>
+            <li>jQuery is Required!</li>
+            <li>add .fa-dt-counter to your element and define 4 child elements for days, hours, minutes, seconds on .fa-dt-counter</li>
+            <li>add .fa-dt-counter-days on days, .fa-dt-counter-hours on hours, .fa-dt-counter-minutes on minutes, .fa-dt-counter-seconds on seconds</li>
+            <li>use data-dateTime="" on .fa-dt-counter to set Date or DateTime</li>
+            <li>use .en-digit-counter on .fa-dt-counter to En Digits</li>
+            <li>css file optional!</li>
+            <li>use data-content="" on .fa-dt-counter-days, .fa-dt-counter-hours, .fa-dt-counter-minutes,
+                .fa-dt-counter-seconds to set name of section (css file Required)</li>
+            <li>css file, add ':', name of sections and don't allow moved section when counter (fix width)</li>
+            <li>use $('.fa-dt-counter').initDateCounters(callback) to init this sections</li>
+            <li>add callback function to execute when end counter</li>
+            <li>callback function have one argument which refers to .fa-dt-counter</li>
+            <li>for reverse counter up use $(argument).initUpDateCounters() on callback argument</li>
+        </ul>
+
+
+
+    </main>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="src/persian-number-datetime-counter.js"></script>
+    <script>
+        $(function () {
+            $('.fa-dt-counter').not('.after-end-counter-up').initDateCounters();
+            $('.fa-dt-counter-up').initUpDateCounters();
+
+            var dtTodtUp = (element) => {
+                $(element).css('color', 'red').initUpDateCounters();
+            };
+            $('.fa-dt-counter.after-end-counter-up').initDateCounters(dtTodtUp);
+
+            var end = (element) => {
+                $(element).css('transition', 1000 + 'ms').css('color', 'red');
+                setTimeout(() => { $(element).css('color', 'orange'); }, 1000)
+            };
+            $('.fa-num-counter').each((i, item) => {
+                $(item).initNumberCounter(end);
+            });
+
+            var end2 = (element) => {
+                var items = $(element).find('.fa-num-counter-item').each((i, item) => {
+                    $(item).css('transition', i * 1000 + 'ms').css('color', 'red');
+                    setTimeout(() => { $(item).css('color', 'orange'); }, (i * 1000) + 500)
+                });
+
+            };
+            $('.fa-group-num-counter').each((i, item) => {
+                $(item).initGroupNumberCounter(end2);
+            });
+        });
+    </script>
+</body>
+
+</html>
