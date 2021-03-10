@@ -1,6 +1,6 @@
 # Persian-Number-DateTime-Counter
 js liberary to Counter Numbers and DateTimes, with persian and English Digit
-##### See [demo](https://viewapps.github.io/)
+##### See [demo](https://viewapps.github.io/persian-number-datetime-counter.htm)
 ## Installation
 Add files to web page
 ```
